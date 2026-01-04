@@ -2,133 +2,255 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Online Compiler - Practical Codes</title>
+    <title>Practical Code Hub – DSA & OOPs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="accordion">
+<!-- ================= SUBJECT SWITCH ================= -->
+<div class="subject-switch">
+    <button onclick="showSection('dsa')">DSA</button>
+    <button onclick="showSection('oops')">OOPs</button>
+</div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            1. Implement a student record system using a singly linked list that supports creating, inserting, deleting, and displaying student records.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code1', this)">copy</button>
-            <pre><code id="code1">Loading...</code></pre>
+<!-- ===================== DSA SECTION ===================== -->
+<div id="dsa" class="section">
+
+    <h3>Data Structures Laboratory (PCC-504)</h3>
+
+    <div class="accordion">
+
+        <!-- DSA 1 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                1. Implement a student record system using a singly linked list that supports creating, inserting, deleting, and displaying student records.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa1', this)">copy</button>
+                <pre><code id="dsa1">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            2. A university stores student roll numbers in a sorted list. Implement binary search to find whether a given roll number exists in the list.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code2', this)">copy</button>
-            <pre><code id="code2">Loading...</code></pre>
+        <!-- DSA 2 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                2. A university stores student roll numbers in a sorted list. Implement binary search to find whether a given roll number exists in the list.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa2', this)">copy</button>
+                <pre><code id="dsa2">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            3. Write a program to store a sequence of train stations in a singly linked list and reverse the order.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code3', this)">copy</button>
-            <pre><code id="code3">Loading...</code></pre>
+        <!-- DSA 3 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                3. Write a program to store a sequence of train stations in a singly linked list and reverse the order.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa3', this)">copy</button>
+                <pre><code id="dsa3">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            4. A library maintains a large database of books, where each book has a unique ISBN number. Implement hashing to store and search for books efficiently using their ISBN numbers.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code4', this)">copy</button>
-            <pre><code id="code4">Loading...</code></pre>
+        <!-- DSA 4 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                4. A library maintains a large database of books, where each book has a unique ISBN number. Implement hashing to store and search for books efficiently using their ISBN numbers.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa4', this)">copy</button>
+                <pre><code id="dsa4">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            5. Create an array to store student names in a class, allowing insertion and traversal.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code5', this)">copy</button>
-            <pre><code id="code5">Loading...</code></pre>
+        <!-- DSA 5 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                5. Create an array to store student names in a class, allowing insertion, deletion, and traversal.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa5', this)">copy</button>
+                <pre><code id="dsa5">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            6. Develop a BST to store and search for student records based on roll numbers.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code6', this)">copy</button>
-            <pre><code id="code6">Loading...</code></pre>
+        <!-- DSA 6 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                6. Develop a BST to store and search for student records based on roll numbers.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa6', this)">copy</button>
+                <pre><code id="dsa6">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            7. Store and display marks of students in multiple subjects using a 2D array.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code7', this)">copy</button>
-            <pre><code id="code7">Loading...</code></pre>
+        <!-- DSA 7 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                7. Store and display marks of students in multiple subjects using a 2D array.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa7', this)">copy</button>
+                <pre><code id="dsa7">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            8. Implement DFS to find paths in a city’s metro rail system using an adjacency list.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code8', this)">copy</button>
-            <pre><code id="code8">Loading...</code></pre>
+        <!-- DSA 8 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                8. Implement DFS to find paths in a city’s metro rail system using an adjacency list.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa8', this)">copy</button>
+                <pre><code id="dsa8">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            9. Design a circular queue to efficiently manage a printer queue where print jobs are cyclically processed.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code9', this)">copy</button>
-            <pre><code id="code9">Loading...</code></pre>
+        <!-- DSA 9 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                9. Design a circular queue to efficiently manage a printer queue where print jobs are cyclically processed.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa9', this)">copy</button>
+                <pre><code id="dsa9">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            10. Implement a stack-based text editor feature that supports undo/redo operations.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code10', this)">copy</button>
-            <pre><code id="code10">Loading...</code></pre>
+        <!-- DSA 10 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                10. Implement a stack-based text editor feature that supports undo/redo operations.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa10', this)">copy</button>
+                <pre><code id="dsa10">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            11. Implement the Bubble Sort algorithm to sort an array of student marks.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code11', this)">copy</button>
-            <pre><code id="code11">Loading...</code></pre>
+        <!-- DSA 11 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                11. Implement the Bubble Sort algorithm to sort an array of student marks.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa11', this)">copy</button>
+                <pre><code id="dsa11">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <button class="title" onclick="toggleCode(this)">
-            12. Implement the Insertion Sort algorithm to sort student names in ascending order.
-        </button>
-        <div class="content">
-            <button class="copy-btn" onclick="copyCode('code12', this)">copy</button>
-            <pre><code id="code12">Loading...</code></pre>
+        <!-- DSA 12 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                12. Implement the Insertion Sort algorithm to sort student names in ascending order.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('dsa12', this)">copy</button>
+                <pre><code id="dsa12">Loading...</code></pre>
+            </div>
         </div>
-    </div>
 
+    </div>
+</div>
+
+<!-- ===================== OOPS SECTION ===================== -->
+<div id="oops" class="section" style="display:none">
+
+    <h3>Object Oriented Programming Laboratory (PCC-505)</h3>
+
+    <div class="accordion">
+
+        <!-- OOPS 1 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                1. Design a mini ATM interface that simulates balance inquiry, deposit, and withdrawal using encapsulation and basic C++ constructs.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('oops1', this)">copy</button>
+                <pre><code id="oops1">Loading...</code></pre>
+            </div>
+        </div>
+
+        <!-- OOPS 2 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                2. Write a menu-driven program using control structures to simulate a student grading system with support for conditional and looping constructs.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('oops2', this)">copy</button>
+                <pre><code id="oops2">Loading...</code></pre>
+            </div>
+        </div>
+
+        <!-- OOPS 3 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                3. Create a C++ program to simulate a basic calculator supporting expression parsing using function overloading and inline functions.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('oops3', this)">copy</button>
+                <pre><code id="oops3">Loading...</code></pre>
+            </div>
+        </div>
+
+        <!-- OOPS 4 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                4. Implement a class for a Complex Number, overload the +, −, and * operators, and manage memory using dynamic allocation.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('oops4', this)">copy</button>
+                <pre><code id="oops4">Loading...</code></pre>
+            </div>
+        </div>
+
+        <!-- OOPS 5 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                5. Design a class for a Student Database that allows the addition, deletion, and search of student records using static members and friend functions.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('oops5', this)">copy</button>
+                <pre><code id="oops5">Loading...</code></pre>
+            </div>
+        </div>
+
+        <!-- OOPS 6 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                6. Implement a multi-level inheritance model representing an organization hierarchy and demonstrate method overriding and virtual functions.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('oops6', this)">copy</button>
+                <pre><code id="oops6">Loading...</code></pre>
+            </div>
+        </div>
+
+        <!-- OOPS 7 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                7. Develop a custom vector class using C++ STL and templates, with member functions to perform insert, delete, and search operations.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('oops7', this)">copy</button>
+                <pre><code id="oops7">Loading...</code></pre>
+            </div>
+        </div>
+
+        <!-- OOPS 8 -->
+        <div class="item">
+            <button class="title" onclick="toggleCode(this)">
+                8. Create a program using hybrid inheritance to model academic and extracurricular performance and resolve ambiguity using virtual base classes.
+            </button>
+            <div class="content">
+                <button class="copy-btn" onclick="copyCode('oops8', this)">copy</button>
+                <pre><code id="oops8">Loading...</code></pre>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <script src="script.js"></script>

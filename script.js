@@ -1,22 +1,35 @@
-/* Load external code files */
+/* ================= SUBJECT SWITCH ================= */
+function showSection(section) {
+    document.getElementById("dsa").style.display = "none";
+    document.getElementById("oops").style.display = "none";
+    document.getElementById(section).style.display = "block";
+}
+
+/* ================= LOAD CODE FILE ================= */
 function loadCode(file, id) {
     fetch(file)
         .then(res => res.text())
         .then(data => {
-            document.getElementById(id).textContent = data;
+            const el = document.getElementById(id);
+            if (el) el.textContent = data;
         })
         .catch(() => {
-            document.getElementById(id).textContent = "Unable to load file.";
+            const el = document.getElementById(id);
+            if (el) el.textContent = "Unable to load file.";
         });
 }
 
-/* Toggle accordion (open/close same title) */
+/* ================= ACCORDION TOGGLE ================= */
 function toggleCode(btn) {
     const content = btn.nextElementSibling;
     const isOpen = content.style.display === "block";
 
-    document.querySelectorAll(".content").forEach(c => c.style.display = "none");
-    document.querySelectorAll(".title").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".content").forEach(c => {
+        c.style.display = "none";
+    });
+    document.querySelectorAll(".title").forEach(t => {
+        t.classList.remove("active");
+    });
 
     if (!isOpen) {
         content.style.display = "block";
@@ -24,26 +37,37 @@ function toggleCode(btn) {
     }
 }
 
-/* Silent copy */
+/* ================= SILENT COPY ================= */
 function copyCode(codeId, btn) {
-    navigator.clipboard.writeText(
-        document.getElementById(codeId).innerText
-    );
+    const code = document.getElementById(codeId);
+    if (!code) return;
+
+    navigator.clipboard.writeText(code.innerText);
 
     btn.classList.add("copied");
     setTimeout(() => btn.classList.remove("copied"), 1500);
 }
 
-// ===== Load all practical code files =====
-loadCode("codes/student_linked_list.cpp", "code1");
-loadCode("codes/binary_search.cpp", "code2");
-loadCode("codes/reverse_linked_list.cpp", "code3");
-loadCode("codes/hashing.cpp", "code4");
-loadCode("codes/array_students.cpp", "code5");
-loadCode("codes/bst.cpp", "code6");
-loadCode("codes/2d_array.cpp", "code7");
-loadCode("codes/dfs.cpp", "code8");
-loadCode("codes/circular_queue.cpp", "code9");
-loadCode("codes/undo_redo.cpp", "code10");
-loadCode("codes/bubble_sort.cpp", "code11");
-loadCode("codes/insertion_sort.cpp", "code12");
+/* ================= LOAD DSA PRACTICAL FILES ================= */
+loadCode("codes_dsa/student_linked_list.cpp", "dsa1");
+loadCode("codes_dsa/binary_search.cpp", "dsa2");
+loadCode("codes_dsa/reverse_linked_list.cpp", "dsa3");
+loadCode("codes_dsa/hashing.cpp", "dsa4");
+loadCode("codes_dsa/array_students.cpp", "dsa5");
+loadCode("codes_dsa/bst.cpp", "dsa6");
+loadCode("codes_dsa/2d_array.cpp", "dsa7");
+loadCode("codes_dsa/dfs.cpp", "dsa8");
+loadCode("codes_dsa/circular_queue.cpp", "dsa9");
+loadCode("codes_dsa/undo_redo.cpp", "dsa10");
+loadCode("codes_dsa/bubble_sort.cpp", "dsa11");
+loadCode("codes_dsa/insertion_sort.cpp", "dsa12");
+
+/* ================= LOAD OOPS PRACTICAL FILES ================= */
+loadCode("codes_oops/atm_encapsulation.cpp", "oops1");
+loadCode("codes_oops/student_grading.cpp", "oops2");
+loadCode("codes_oops/calculator_overloading.cpp", "oops3");
+loadCode("codes_oops/complex_operator_overloading.cpp", "oops4");
+loadCode("codes_oops/student_database_static_friend.cpp", "oops5");
+loadCode("codes_oops/multilevel_inheritance.cpp", "oops6");
+loadCode("codes_oops/custom_vector_template.cpp", "oops7");
+loadCode("codes_oops/hybrid_inheritance.cpp", "oops8");

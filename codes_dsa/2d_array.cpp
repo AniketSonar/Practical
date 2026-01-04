@@ -2,17 +2,34 @@
 using namespace std;
 
 int main() {
-    int s, sub;
-    cin >> s >> sub;
+    int students, subjects;
 
-    int m[s][sub];
-    for (int i = 0; i < s; i++)
-        for (int j = 0; j < sub; j++)
-            cin >> m[i][j];
+    cout << "Enter number of students: ";
+    cin >> students;
 
-    for (int i = 0; i < s; i++) {
-        for (int j = 0; j < sub; j++)
-            cout << m[i][j] << " ";
+    cout << "Enter number of subjects: ";
+    cin >> subjects;
+
+    int marks[students][subjects];
+
+    // Input marks
+    cout << "Enter marks:\n";
+    for (int i = 0; i < students; i++) {
+        cout << "Student " << i + 1 << ":\n";
+        for (int j = 0; j < subjects; j++) {
+            cin >> marks[i][j];
+        }
+    }
+
+    // Display marks
+    cout << "\nMarks of Students:\n";
+    for (int i = 0; i < students; i++) {
+        cout << "Student " << i + 1 << ": ";
+        for (int j = 0; j < subjects; j++) {
+            cout << marks[i][j] << " ";
+        }
         cout << endl;
     }
+
+    return 0;
 }

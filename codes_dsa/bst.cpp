@@ -8,24 +8,50 @@ struct Node {
 };
 
 Node* insert(Node* root, int r) {
-    if (!root) return new Node{r, NULL, NULL};
-    if (r < root->roll) root->left = insert(root->left, r);
-    else root->right = insert(root->right, r);
+    if (root == NULL)
+        return new Node{r, NULL, NULL};
+
+    if (r < root->roll)
+        root->left = insert(root->left, r);
+    else
+        root->right = insert(root->right, r);
+
     return root;
 }
 
 bool search(Node* root, int r) {
-    if (!root) return false;
-    if (root->roll == r) return true;
-    if (r < root->roll) return search(root->left, r);
-    return search(root->right, r);
+    if (root == NULL)
+        return false;
+
+    if (root->roll == r)
+        return true;
+
+    if (r < root->roll)
+        return search(root->left, r);
+    else
+        return search(root->right, r);
 }
 
 int main() {
     Node* root = NULL;
-    root = insert(root, 10);
-    insert(root, 5);
-    insert(root, 20);
+    int n, roll, key;
 
-    cout << (search(root, 20) ? "Found" : "Not Found");
+    cout << "Enter number of students: ";
+    cin >> n;
+
+    cout << "Enter roll numbers:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> roll;
+        root = insert(root, roll);
+    }
+
+    cout << "Enter roll number to search: ";
+    cin >> key;
+
+    if (search(root, key))
+        cout << "Student record found";
+    else
+        cout << "Student record not found";
+
+    return 0;
 }

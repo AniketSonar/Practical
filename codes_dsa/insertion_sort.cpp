@@ -3,20 +3,32 @@ using namespace std;
 
 int main() {
     int n;
+
+    cout << "Enter number of elements: ";
     cin >> n;
-    int a[n];
 
-    for (int i = 0; i < n; i++) cin >> a[i];
+    int arr[n];
 
-    for (int i = 1; i < n; i++) {
-        int key = a[i], j = i - 1;
-        while (j >= 0 && a[j] > key) {
-            a[j + 1] = a[j];
-            j--;
-        }
-        a[j + 1] = key;
+    cout << "Enter elements:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
 
-    for (int i = 0; i < n; i++)
-        cout << a[i] << " ";
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+
+    cout << "Sorted array:\n";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
 }

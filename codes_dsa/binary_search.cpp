@@ -3,25 +3,40 @@ using namespace std;
 
 int main() {
     int n, key;
-    cout << "Enter number of students: ";
+
+    cout << "Enter number of elements: ";
     cin >> n;
 
-    int a[n];
-    cout << "Enter sorted roll numbers:\n";
-    for (int i = 0; i < n; i++) cin >> a[i];
+    int arr[n];
 
-    cout << "Enter roll to search: ";
+    cout << "Enter elements in sorted order:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    cout << "Enter element to search: ";
     cin >> key;
 
-    int l = 0, r = n - 1;
-    while (l <= r) {
-        int m = (l + r) / 2;
-        if (a[m] == key) {
-            cout << "Found at position " << m + 1;
-            return 0;
+    int low = 0, high = n - 1, mid;
+    bool found = false;
+
+    while (low <= high) {
+        mid = (low + high) / 2;
+
+        if (arr[mid] == key) {
+            found = true;
+            break;
+        } else if (arr[mid] < key) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
         }
-        if (a[m] < key) l = m + 1;
-        else r = m - 1;
     }
-    cout << "Not found";
+
+    if (found)
+        cout << "Element found at position " << mid + 1;
+    else
+        cout << "Element not found";
+
+    return 0;
 }

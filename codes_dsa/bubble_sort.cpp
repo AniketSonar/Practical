@@ -1,18 +1,27 @@
-#include <iostream>
-using namespace std;
-
-int main() {
-    int n;
-    cin >> n;
-    int a[n];
-
-    for (int i = 0; i < n; i++) cin >> a[i];
-
-    for (int i = 0; i < n - 1; i++)
-        for (int j = 0; j < n - i - 1; j++)
-            if (a[j] > a[j + 1])
-                swap(a[j], a[j + 1]);
-
-    for (int i = 0; i < n; i++)
-        cout << a[i] << " ";
+#include <iostream> 
+using namespace std; 
+int main() { 
+    int n; 
+    cout << "Enter number of students: "; 
+    cin >> n; 
+    int marks[n]; 
+    cout << "Enter student marks:\n"; 
+    for (int i = 0; i < n; i++) { 
+        cin >> marks[i]; 
+    } 
+    for (int i = 0; i < n - 1; i++) { 
+        for (int j = 0; j < n - i - 1; j++) { 
+            if (marks[j] > marks[j + 1]) { 
+                int temp = marks[j]; 
+                marks[j] = marks[j + 1]; 
+                marks[j + 1] = temp; 
+            } 
+        } 
+    } 
+    cout << "Sorted Marks (Ascending Order): "; 
+    for (int i = 0; i < n; i++) { 
+        cout << marks[i] << " "; 
+    } 
+ 
+    return 0; 
 }
